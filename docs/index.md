@@ -27,7 +27,7 @@ VR view allows you to embed 360 degree VR media into mobile, and native apps on 
 
 Monoscopic 360             |  Stereo View
 :-------------------------:|:-------------------------:
-![](Resources/panorama-preview.gif)  |  ![](Resources/StereoView.png)
+<img src="Resources/panorama-preview.gif" width="200" height="300">  |  <img src="Resources/StereoView.png" width="300" height="200">
 
 
 ## Supported Platforms
@@ -45,7 +45,6 @@ Monoscopic 360             |  Stereo View
 ## Known Limitations
 
 - [`Metal`](https://developer.apple.com/documentation/metal) is not supported in the iOS Simulator, please run your application on real device.
-- VR mode is supported only when rotating the device to left.
 
 ## Installation
 
@@ -64,7 +63,6 @@ pod 'PlayKitVR'
 
 >Note: 
 * If `Player Delegation` or `360 UIVIewController Attachment` section is missed, you won't get Player instance for 360 content.
-* Our advise is to `getController` whenever you have to use PKVRController API, don't hold a reference to this controller.
 
 ## Usage
 
@@ -72,7 +70,7 @@ pod 'PlayKitVR'
 
 The following classes/interfaces are the public API of the library:
 
-* `PlayerDelegate` - Impliment `shouldAddPlayerViewController` to get 360&VR UIViewController.
+* `PlayerDelegate` - Implement `shouldAddPlayerViewController` to get 360&VR UIViewController.
 * `PKVRController` - Use this class to interact with the library.
 
 ### Basic Implementation:
@@ -81,7 +79,6 @@ The following classes/interfaces are the public API of the library:
 
 override func viewDidLoad() {
         super.viewDidLoad()
-        self.playheadSlider.isContinuous = false;
         
         // 1. Load the player
         do {
